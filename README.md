@@ -12,7 +12,8 @@ to stock_data folder.
 To run -
 
 `python app.py`
-
+## Landing image
 ![landing page image](/img/landing.png)
 
+## Result image
 ![result page image](/img/result.png)
