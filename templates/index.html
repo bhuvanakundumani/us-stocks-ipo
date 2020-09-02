@@ -1,0 +1,89 @@
+{% include "header.html"%}
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+                <h1 class="title" align="center">
+                   Welcome to IPO (US Stocks) finder App !!
+                    <br>
+
+                </h1>
+
+                <h1 class="title" align="center">
+
+                    Choose the year that you want to search from 2008
+                </h1>
+        </div>
+    </section>
+
+<br>
+<br>
+
+
+
+
+   <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-4 is-4">
+
+                    <h3>Searches from <b> 01 JAN, Starting year </b> to <b>31 DEC, Ending year</b></h3>
+                    <br>
+
+                    <form method="POST">
+
+
+                    <br>
+                    <input type="text"  cols = "30" name="starting-year" style=" width:100px;" data-toggle="tooltip"
+                           data-placement="top" title="Date format YYYY!" placeholder="Starting year" required>
+                    <input type="text"  cols = "30" name="ending-year" style=" width:100px;" data-toggle="tooltip"
+                           data-placement="top" title="Date format YYYY!" placeholder="Ending year" required>
+                    <br>
+                    <br>
+
+                    <input  class="button is-info"  type="submit" name="Submit">
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <div class="container">
+        <div class="columns">
+            <div class="column is-offset-4 is-5">
+             {% if ipo_dict %}
+                {% for key, value in ipo_dict.items() %}
+                <div class="box">
+                    <article class="media">
+                        <div class="media-left">
+
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <span class="title"><a href="{{ url_for('ipo_stock_details', name=key) }}"> {{ key }} </a></span>
+                                    <br>
+
+                                    <span class="subtitle">{{ value[0] }}</span>
+                                    <br>
+                                    <span class="subtitle">IPO Date: {{ value[1] }}</span>
+                                    <br>
+                                    <span class="subtitle">IPO Price: {{ value[2] }}</span>
+
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+              {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

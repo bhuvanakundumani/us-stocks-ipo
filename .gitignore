@@ -1,0 +1,16 @@
+.venv
+.env
+env/
+venv2/*.*
+ENV/
+pyvenv.cfg
+pip-selfcheck.json
+.python-version
+stock_data/*.*
+.idea
+__pycache__*.*
+*.pyc
+.DS_Store
+.vscode/
+__pycache__/
+**/__pycache__/

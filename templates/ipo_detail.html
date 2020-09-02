@@ -1,0 +1,46 @@
+{% include "header.html"%}
+
+
+<body>
+
+    <section class="hero is-primary">
+        <div class="hero-body">
+                <h1 class="title" align="center">
+                  Performance of
+                    {% if name %}
+                    {{name }}
+                    {% endif %}
+                </h1>
+
+
+        </div>
+    </section>
+
+
+    <section class="section">
+
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-0  ">
+                    <div class="box">
+
+                                <div class="content">
+                                <span>
+                {{ div1|safe }}
+
+                {{ script1|safe }} </span>
+
+                                    <span>
+                {{ div2|safe }}
+
+                {{ script2|safe }} </span>
+
+                                </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
