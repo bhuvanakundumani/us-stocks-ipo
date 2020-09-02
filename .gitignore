@@ -14,3 +14,5 @@ __pycache__*.*
 .vscode/
 __pycache__/
 **/__pycache__/
+venv2/
+venv2
