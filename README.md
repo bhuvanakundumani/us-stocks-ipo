@@ -11,8 +11,7 @@ to stock_data folder.
 
 To run -
 
-```
-python app.py```
+`python app.py`
 
 ![landing page image](/img/landing.png)
 
